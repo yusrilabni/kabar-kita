@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-brand-bg text-brand-txt antialiased;
+    }
+
+    /* Scrollbar yang lebih cantik dan modern */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-slate-300 rounded-full hover:bg-brand-primary/50 transition-colors;
+    }
+}
+
+.glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-glass;
+}
+
+.transition-premium {
+    @apply transition-all duration-500 ease-in-out;
+}
+
+[data-aos] {
+    pointer-events: none;
+}
+
+.aos-animate {
+    pointer-events: auto;
+}
